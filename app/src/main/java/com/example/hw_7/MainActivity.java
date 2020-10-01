@@ -6,7 +6,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity implements FragmentFunctions{
+public class MainActivity extends AppCompatActivity implements FragmentFunctions {
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
 
@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements FragmentFunctions
         fragmentManager = getSupportFragmentManager();
         Fragment1 fragment1 = new Fragment1();
         fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.content3, fragment1);
+        fragmentTransaction.replace(R.id.content3WebView, fragment1);
         fragmentTransaction.commit();
 
     }
@@ -33,12 +33,15 @@ public class MainActivity extends AppCompatActivity implements FragmentFunctions
         Fragment2 fragment2 = new Fragment2();
         fragmentManager.beginTransaction()
                 .hide(fragment2).add(R.id.content2, new Fragment1()).commit();
-
-
     }
 
     @Override
-    public void openUrl() {
+    public void openUrl(String url) {
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.content3WebView, new Fragment3(url))
+                .addToBackStack(null)
+                .commit();
 
     }
 }

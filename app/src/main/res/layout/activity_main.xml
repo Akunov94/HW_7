@@ -21,14 +21,10 @@
         tools:layout="@layout/fragment_2">
 
     </fragment>
-    <fragment
-        android:id="@+id/content3"
-        android:name="com.example.hw_7.Fragment3"
+    <FrameLayout
+        android:id="@+id/content3WebView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout="@layout/fragment_3">
-
-    </fragment>
+        android:layout_height="match_parent"/>
 
 
 </LinearLayout>

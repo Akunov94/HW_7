@@ -3,12 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Fragment2">
 
+    <TextView
+        android:fontFamily="casual"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_ololo"
+        android:layout_gravity="center|top"
+        android:textSize="20sp"
+        android:text="Ccылки"/>
+
     <androidx.recyclerview.widget.RecyclerView
+        android:background="#11ED08"
+        android:padding="20dp"
         android:id="@+id/recycler"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
     </androidx.recyclerview.widget.RecyclerView>
+
+
 
 </FrameLayout>
