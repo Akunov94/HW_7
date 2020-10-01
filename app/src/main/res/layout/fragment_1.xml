@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context=".Fragment1">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="1in"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:textSize="12sp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/btnopen"
+            android:layout_gravity="bottom"
+            android:text="send fragment"
+            android:layout_marginLeft="20dp" />
+
+        <Button
+            android:id="@+id/btnHide"
+            android:layout_width="1in"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_below="@id/btnSend"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/btnopen"
+            android:text="hide fragment"
+            android:textSize="12sp"
+            android:layout_marginLeft="20dp" />
+    </LinearLayout>
+
+</FrameLayout>
